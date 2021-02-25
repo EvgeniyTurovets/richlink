@@ -1,0 +1,221 @@
+* {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+a {
+  color: inherit;
+  text-decoration: none; }
+
+a:hover {
+  text-decoration: none; }
+
+li {
+  list-style: none; }
+
+ul {
+  padding-left: 0; }
+
+ol {
+  padding-left: 0; }
+
+input:focus {
+  outline: none; }
+
+textarea:focus {
+  outline: none; }
+
+button:focus {
+  outline: none; }
+
+textarea:focus {
+  outline: none; }
+
+body {
+  min-width: 320px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #383838; }
+
+.auth {
+  height: 100vh;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  background: linear-gradient(116.27deg, #EEA942 6.18%, rgba(215, 20, 8, 0.67) 94.43%);
+  overflow: auto;
+  padding-bottom: 50px;
+  padding-top: 50px;
+  padding-right: 15px;
+  padding-left: 15px; }
+
+.site-name {
+  text-align: center;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 700;
+  color: #fff;
+  font-size: 60px;
+  line-height: 71px;
+  margin-top: 6px;
+  margin-bottom: 41px; }
+
+.auth-form {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  width: 100%; }
+
+.auth-form form {
+  background: #FFFFFF;
+  box-shadow: 0px 4px 30px rgba(255, 30, 30, 0.25);
+  border-radius: 20px;
+  width: 436px;
+  padding: 32px 51px 36px 51px;
+  max-width: 100%; }
+
+.auth-form__name {
+  text-align: center;
+  font-weight: bold;
+  font-size: 25px;
+  line-height: 29px;
+  color: #383838;
+  margin-bottom: 33px; }
+
+.auth-form label {
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 19px;
+  margin-bottom: 6px;
+  display: block; }
+
+.input input {
+  background: #FFEACA;
+  border-radius: 5px;
+  width: 100%;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  height: 44px;
+  padding: 0 20px;
+  border: 2px solid transparent;
+  transition: 0.3s all; }
+
+.input input:focus {
+  border: 2px solid #884594; }
+
+.auth-form .input {
+  margin-bottom: 26px; }
+
+.auth-form .input:last-child {
+  margin-bottom: 12px; }
+
+.checkbox {
+  margin-bottom: 30px; }
+  .checkbox input {
+    display: none; }
+  .checkbox label {
+    display: -ms-flexbox;
+    display: flex;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px; }
+    .checkbox label a {
+      display: inline;
+      color: #FF6767;
+      text-decoration: underline;
+      transition: 0.3s all; }
+  .checkbox input + label:before {
+    cursor: pointer;
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    -ms-flex: 0 0 20px;
+        flex: 0 0 20px;
+    border: 2px solid #884594;
+    margin-right: 11px;
+    border-radius: 2px;
+    transition: 0.3s all;
+    background-position: center;
+    background-repeat: no-repeat; }
+  .checkbox input:checked + label:before {
+    background-image: url("../img/auth/checked.svg");
+    background-color: #884594; }
+
+.auth-form button {
+  width: 100%;
+  padding: 16px 28px 14px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 26px;
+  background: #884594;
+  border-radius: 3px;
+  color: #fff;
+  cursor: pointer;
+  margin-bottom: 30px;
+  transition: 0.3s all; }
+
+.auth-form button:hover {
+  opacity: 0.9; }
+
+.uge {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  font-size: 14px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+  .uge a {
+    color: #ED793F;
+    display: inline-block;
+    margin-left: 5px;
+    text-decoration: underline; }
+
+.input a {
+  display: inline-block;
+  margin-top: 10px;
+  text-decoration: underline; }
+
+.link {
+  color: #ed793f;
+  font-size: 14px;
+  transition: 0.3s all; }
+
+@media (max-height: 899px) and (min-width: 1024px) {
+  .auth {
+    -ms-flex-align: start;
+        align-items: flex-start; } }
+
+@media (max-width: 1023px) {
+  .auth {
+    -ms-flex-align: start;
+        align-items: flex-start; } }
+
+@media (max-width: 479px) {
+  .auth-form form {
+    padding: 32px 20px 36px 20px; }
+  .auth-form button {
+    font-size: 18px;
+    line-height: 20px; }
+  .auth {
+    padding: 20px 15px; }
+  .auth-form > img {
+    width: 100px; }
+  .site-name {
+    margin-bottom: 30px; } }
+
+@media (max-width: 374px) {
+  .auth-form button {
+    font-size: 14px;
+    line-height: 20px; } }
