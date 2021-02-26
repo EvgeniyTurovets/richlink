@@ -42,10 +42,17 @@ textarea:focus {
     outline: none;
 }
 
+button,
+input {
+    font-family: 'Raleway', sans-serif;
+    appearance: none;
+}
+
 body {
     min-width: 320px;
     font-family: 'Raleway', sans-serif;
     font-size: 16px;
+    line-height: 1.2;
     font-weight: 500;
     color: #383838;
 }
