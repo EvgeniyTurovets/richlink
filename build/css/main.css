@@ -880,7 +880,11 @@ body {
   width: 216px;
   padding-left: 42px;
   height: 36px;
-  background-color: transparent; }
+  background-color: transparent;
+  transition: 0.2s all; }
+
+.catalog__search input:focus {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); }
 
 .catalog__search input::-webkit-input-placeholder {
   color: #383838; }
@@ -1059,7 +1063,8 @@ body {
     min-height: 100%;
     width: 100%;
     word-break: break-word;
-    font-size: 13px; }
+    font-size: 13px;
+    transition: 0.2s all; }
   .catalog__body .text-block:focus {
     outline: none;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); }
