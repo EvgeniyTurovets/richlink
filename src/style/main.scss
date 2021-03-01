@@ -132,6 +132,7 @@
     padding-top: 24px;
     padding-bottom: 24px;
     width: 284px;
+    z-index: 5;
     .close {
         position: absolute;
         top: 10px;
@@ -311,7 +312,7 @@ input {
         padding-bottom: 20px;
     }
     ul:first-child {
-        padding-top: 15px;
+        padding-top: 0px;
     }
     ul:last-child {
         border-bottom: 0;
@@ -573,6 +574,12 @@ input {
     .burger {
         margin-right: 10px;
     }
+    .top-select {
+        width: 100%;
+    }
+    .top-select .nice-select {
+        flex: 1;
+    }
 }
 
 @media(max-width: 374px) {
@@ -738,3 +745,85 @@ input {
         display: block;
     }
 }
+
+.market__item.not-active {
+    .market__right .btn-api {
+        pointer-events: none;
+        border: 2px solid #E5E5E5;
+        color: #E5E5E5;
+        svg path {
+            fill: #E5E5E5;
+            transition: 0.3s all;
+        }
+    }
+}
+
+.marker-add {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    svg {
+        margin-right: 10px;
+    }
+}
+
+@media(max-width: 470px) {
+    .market__row {
+        flex-wrap: wrap;
+    }
+    .market__right {
+        width: 100%;
+        margin-top: 15px;
+    }
+    .market__left {
+        width: 100%;
+    }
+    .market__left .market__img {
+        flex: 1;
+    }
+}
+
+.logo-down {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 26px;
+}
+
+.logo-down img {
+    display: block;
+    margin-right: 19px;
+    height: 36px;
+}
+
+.file {
+    input {
+        display: none;
+    }
+    input+label {
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding-left: 9px;
+        height: 36px;
+        width: 170px;
+        padding-right: 12px;
+    }
+}
+
+@media(max-width: 399px) {
+    .logo-down {
+        flex-direction: column-reverse;
+    }
+}
+
+.market.market--list {
+    .market__left {
+        width: 100%;
+        .market__img {
+            flex: 1;
+        }
+    }
+}
+
+@import './template/catalog.scss';

@@ -45,7 +45,8 @@ body {
   font-size: 16px;
   line-height: 1.2;
   font-weight: 500;
-  color: #383838; }
+  color: #383838;
+  background-color: #FFF4EE; }
 
 .auth {
   height: 100vh;
