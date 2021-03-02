@@ -289,8 +289,11 @@ body {
   line-height: 36px;
   color: #000000;
   margin-bottom: 23px; }
+  .addsite__title span {
+    word-break: break-word; }
   .addsite__title svg {
-    margin-left: 18px; }
+    margin-left: 18px;
+    min-width: 20px; }
 
 label {
   font-weight: 800;

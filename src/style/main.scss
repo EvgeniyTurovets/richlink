@@ -259,8 +259,12 @@
     line-height: 36px;
     color: #000000;
     margin-bottom: 23px;
+    span {
+        word-break: break-word;
+    }
     svg {
         margin-left: 18px;
+        min-width: 20px;
     }
 }
 
