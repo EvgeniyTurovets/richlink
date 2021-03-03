@@ -89,7 +89,7 @@ $(function() {
             $('.catalog__setting__wrap').fadeOut(200)
         }
     });
-    console.log($('.catalog__head .action input[type="checkbox"]'))
+
     $('.catalog__head .action input[type="checkbox"]').on('change', function() {
 
         if ($(this).is(":checked")) {
@@ -207,15 +207,106 @@ $(function() {
         }
     }
 
-    settingCheck.on('change', () => {
+    settingCheck.on('change', function() {
         settingReed()
         settingApruv()
     })
-    priceCheck.on('change', () => {
+    priceCheck.on('change', function() {
         settingReed()
         settingApruv()
     })
 
     settingReed()
     settingApruv()
+
+    //шаги
+    $('.shag__title').on('click', function() {
+        let thisis = $(this)
+
+
+        if (thisis.hasClass('active')) {
+
+            $('.shag__title').removeClass('active')
+            $('.shag__content').slideUp(200);
+        } else {
+            $('.shag__title').removeClass('active')
+            $('.shag__content').slideUp(200);
+
+            thisis.addClass('active')
+            setTimeout(function() {
+                thisis.next('.shag__content').slideDown(200)
+            }, 200)
+        }
+    })
+
+    // копирование кода
+    function selectText(containerid) {
+        if (document.selection) { // IE
+            var range = document.body.createTextRange();
+            range.moveToElementText(document.getElementById(containerid));
+            range.select();
+        } else if (window.getSelection) {
+            var range = document.createRange();
+            range.selectNode(document.getElementById(containerid));
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(range);
+        }
+    }
+
+    $('#copy-code').on('click', function() {
+        let copyText = $('#code')
+        selectText('code')
+        document.execCommand("copy");
+        $('.text-copy').fadeIn(400)
+        setTimeout(function() {
+            $('.text-copy').fadeOut()
+        }, 1500)
+
+    })
+
+
+    // выбор вида
+    $('.vibor__content__item.active').show()
+    $('.vibor__item').on('click', function() {
+        if (!$(this).hasClass('active')) {
+            $('.vibor__item').removeClass('active')
+            $('.vibor__content__item').removeClass('active')
+            $('.vibor__content__item').hide()
+            $(this).addClass('active')
+            $('.vibor__content__item').eq($(this).index()).addClass('active')
+            $('.vibor__content__item.active').fadeIn()
+        }
+    })
+
+    $('.customer__inline .color input').on('change', function() {
+        let colorVal = $(this).val()
+        console.log(colorVal)
+        if (colorVal == '#ffffff') {
+            $(this).addClass('white')
+        } else {
+            $(this).removeClass('white')
+        }
+        $(this).closest('.customer__inline').find('.text').val(colorVal)
+    })
+    $('.customer__inline .text').on('change', function() {
+        let colorVal = $(this).val()
+        $(this).closest('.customer__inline').find('.color input').val(colorVal)
+    })
+
+    $('.input-size span.up').on('click', function() {
+        let input = $(this).closest('.input-size').find('input')
+        if (input.val() < input.attr('max')) {
+            input.val(+input.val() + 1)
+        }
+
+    })
+    $('.input-size span.down').on('click', function() {
+        let input = $(this).closest('.input-size').find('input')
+        if (input.val() > input.attr('min')) {
+            input.val(+input.val() - 1)
+        }
+
+    })
+
+
 })
