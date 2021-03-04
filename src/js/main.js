@@ -227,15 +227,15 @@ $(function() {
         if (thisis.hasClass('active')) {
 
             $('.shag__title').removeClass('active')
-            $('.shag__content').slideUp(200);
+            $('.shag__content').slideUp(400);
         } else {
             $('.shag__title').removeClass('active')
-            $('.shag__content').slideUp(200);
+            $('.shag__content').slideUp(400);
 
             thisis.addClass('active')
-            setTimeout(function() {
-                thisis.next('.shag__content').slideDown(200)
-            }, 200)
+
+            thisis.next('.shag__content').slideDown(400)
+
         }
     })
 
@@ -256,6 +256,39 @@ $(function() {
     $('#copy-code').on('click', function() {
         let copyText = $('#code')
         selectText('code')
+        document.execCommand("copy");
+        $('.text-copy').fadeIn(400)
+        setTimeout(function() {
+            $('.text-copy').fadeOut()
+        }, 1500)
+
+    })
+
+    $('#copy-code2').on('click', function() {
+        let copyText = $('#code2')
+        selectText('code2')
+        document.execCommand("copy");
+        $('.text-copy').fadeIn(400)
+        setTimeout(function() {
+            $('.text-copy').fadeOut()
+        }, 1500)
+
+    })
+
+    $('#copy-code3').on('click', function() {
+        let copyText = $('#code3')
+        selectText('code2')
+        document.execCommand("copy");
+        $('.text-copy').fadeIn(400)
+        setTimeout(function() {
+            $('.text-copy').fadeOut()
+        }, 1500)
+
+    })
+
+    $('#copy-code4').on('click', function() {
+        let copyText = $('#code4')
+        selectText('code4')
         document.execCommand("copy");
         $('.text-copy').fadeIn(400)
         setTimeout(function() {
@@ -309,4 +342,183 @@ $(function() {
     })
 
 
+
+    // стилизация виджета
+
+    //цвет стрелок и кнопок
+    let v1BtnColor1 = $('#v-1-btn-color-1'),
+        v1ArrColor1 = $('#v-1-arr-color-1'),
+        v1BtnColor2 = $('#v-1-btn-color-2'),
+        v1ArrColor2 = $('#v-1-arr-color-2');
+
+    let v1EditBtnColor1 = $('.v-1-edit-btn-color-1'),
+        v1EditArrColor1 = $('.v-1-edit-arr-color-1'),
+        v1EditBtnColor2 = $('.v-1-edit-btn-color-2'),
+        v1EditArrColor2 = $('.v-1-edit-arr-color-2');
+
+    let v1ugl = $('#v1ugl'),
+        v1shadow = $('#v1shadow')
+
+    function editVidget1() {
+        v1EditBtnColor1.css('background', v1BtnColor1.val())
+        v1EditArrColor1.css('fill', v1ArrColor1.val())
+        v1EditBtnColor2.css('background', v1BtnColor2.val())
+        v1EditArrColor2.css('fill', v1ArrColor2.val())
+
+        if (v1ugl.is(':checked')) {
+            $('#vidget1').addClass('ugli')
+        } else {
+            $('#vidget1').removeClass('ugli')
+        }
+
+        if (v1shadow.is(':checked')) {
+            $('#vidget1').addClass('shadow')
+        } else {
+            $('#vidget1').removeClass('shadow')
+        }
+    }
+    editVidget1()
+
+    $('#v1 .customer__inline input').on('change', function() {
+        editVidget1()
+    })
+    $('#v1 .custom__checkbox input').on('change', function() {
+        editVidget1()
+    })
+
+    //цвет вид кнопки первого виджета
+    let v1BtnText = $('#v1-btn-text'),
+        v1BtnFontsize = $('#v1-btn-font-size'),
+        v1BtnFon = $('#v1-btn-fon'),
+        v1BtnColor = $('#v1-btn-color')
+
+    let richbtn = $('#richbtn')
+
+    function editVidget1Btn() {
+        richbtn.css('font-size', v1BtnFontsize.val() + 'px')
+        richbtn.css('background-color', v1BtnFon.val())
+        richbtn.css('color', v1BtnColor.val())
+        richbtn.text(v1BtnText.val())
+    }
+    editVidget1Btn()
+
+    $('#v-custom-btn input').on('change', function() {
+        editVidget1Btn()
+    })
+    $('#v-custom-btn .input-size span').on('click', function() {
+        editVidget1Btn()
+    })
+    v1BtnText.on('keydown', function() {
+        editVidget1Btn()
+    })
+
+
+    //второй виджет
+    //цвет стрелок и кнопок
+    let v2BtnColor1 = $('#v-2-btn-color-1'),
+        v2ArrColor1 = $('#v-2-arr-color-1'),
+        v2BtnColor2 = $('#v-2-btn-color-2'),
+        v2ArrColor2 = $('#v-2-arr-color-2'),
+        v2btnText = $('#v2-btn-text')
+
+    let v2EditBtnColor1 = $('.v-2-edit-btn-color-1'),
+        v2EditArrColor1 = $('.v-2-edit-arr-color-1'),
+        v2EditBtnColor2 = $('.v-2-edit-btn-color-2'),
+        v2EditArrColor2 = $('.v-2-edit-arr-color-2'),
+        v2btnbotText = $('#v2-btn-bot-text')
+
+    let v2ugl = $('#v2ugl'),
+        v2shadow = $('#v2shadow')
+
+    function editVidget2() {
+        v2EditBtnColor1.css('background', v2BtnColor1.val())
+        v2EditArrColor1.css('fill', v2ArrColor1.val())
+        v2EditArrColor1.css('color', v2ArrColor1.val())
+        v2EditBtnColor2.css('background', v2BtnColor2.val())
+        v2EditArrColor2.css('fill', v2ArrColor2.val())
+
+        v2btnbotText.text(v2btnText.val())
+
+        if (v2ugl.is(':checked')) {
+            $('#vidget2').addClass('ugli')
+        } else {
+            $('#vidget2').removeClass('ugli')
+        }
+
+        if (v2shadow.is(':checked')) {
+            $('#vidget2').addClass('shadow')
+        } else {
+            $('#vidget2').removeClass('shadow')
+        }
+    }
+    editVidget2()
+
+    $('#v2 .customer__inline input').on('change', function() {
+        editVidget2()
+    })
+
+    $('#v2 .custom__checkbox input').on('change', function() {
+        editVidget2()
+    })
+
+    v2btnText.on('keydown', function() {
+        editVidget2()
+    })
+
+    //третий виджет
+    //цвет стрелок и кнопок
+    let v3BtnColor1 = $('#v-3-btn-color-1'),
+        v3ArrColor1 = $('#v-3-arr-color-1'),
+        v3BtnColor2 = $('#v-3-btn-color-2'),
+        v3ArrColor2 = $('#v-3-arr-color-2'),
+        v3btnText = $('#v3-btn-text')
+    v3btnfontsize = $('#v3-btn-font-size')
+
+    let v3EditBtnColor1 = $('.v-3-edit-btn-color-1'),
+        v3EditArrColor1 = $('.v-3-edit-arr-color-1'),
+        v3EditBtnColor2 = $('.v-3-edit-btn-color-2'),
+        v3EditArrColor2 = $('.v-3-edit-arr-color-2'),
+        v3EditText = $('#v3-edit-text')
+
+    let v3ugl = $('#v3ugl'),
+        v3shadow = $('#v3shadow')
+
+    function editVidget3() {
+        v3EditBtnColor1.css('background', v3BtnColor1.val())
+        v3EditArrColor1.css('fill', v3ArrColor1.val())
+        v3EditBtnColor2.css('background', v3BtnColor2.val())
+        v3EditArrColor2.css('fill', v3ArrColor2.val())
+
+        v3EditText.text(v3btnText.val())
+        v3EditText.css('font-size', v3btnfontsize.val() + 'px')
+
+        if (v3ugl.is(':checked')) {
+            $('#vidget3').addClass('ugli')
+        } else {
+            $('#vidget3').removeClass('ugli')
+        }
+
+        if (v3shadow.is(':checked')) {
+            $('#vidget3').addClass('shadow')
+        } else {
+            $('#vidget3').removeClass('shadow')
+        }
+    }
+    editVidget3()
+
+    $('#v3 .customer__inline input').on('change', function() {
+        editVidget3()
+    })
+
+    v3btnText.on('keydown', function() {
+        editVidget3()
+    })
+
+    $('#v3 .custom__checkbox input').on('change', function() {
+        editVidget3()
+    })
+
+    $('#v3 .input-size span').on('click', function() {
+        editVidget3()
+    })
 })
