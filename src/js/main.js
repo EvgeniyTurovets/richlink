@@ -120,7 +120,6 @@ $(function() {
     $.fn.selectText = function() {
         var doc = document;
         var element = this[0];
-        console.log(this, element);
         if (doc.body.createTextRange) {
             var range = document.body.createTextRange();
             range.moveToElementText(element);
@@ -313,7 +312,6 @@ $(function() {
 
     $('.customer__inline .color input').on('change input', function() {
         let colorVal = $(this).val()
-        console.log(colorVal)
         if (colorVal == '#ffffff') {
             $(this).addClass('white')
         } else {
@@ -553,7 +551,7 @@ $(function() {
         },
         responsive: true,
         axisX: {
-            // Отключаем сетку для этой оси
+
             showGrid: false,
 
         }
@@ -577,16 +575,12 @@ $(function() {
             bottom: 0,
         },
         axisX: {
-            // Отключаем сетку для этой оси
             showGrid: false,
-            // и не показываем метки
             showLabel: false,
             offset: 0,
         },
         axisY: {
-            // Отключаем сетку для этой оси
             showGrid: false,
-            // и не показываем метки
             showLabel: false,
             offset: 0,
         }
@@ -610,16 +604,16 @@ $(function() {
             bottom: 0,
         },
         axisX: {
-            // Отключаем сетку для этой оси
+
             showGrid: false,
-            // и не показываем метки
+
             showLabel: false,
             offset: 0,
         },
         axisY: {
-            // Отключаем сетку для этой оси
+
             showGrid: false,
-            // и не показываем метки
+
             showLabel: false,
             offset: 0,
         }

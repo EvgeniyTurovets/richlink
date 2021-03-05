@@ -386,5 +386,115 @@
 <script src="./libs/datapicker/datepicker.js"></script>
 <script src="./libs/chartist/chartist.min.js"></script>
 <script src="./js/main.js"></script>
+<script>
+    $(function() {
+
+
+        new Chartist.Line('#click-charts', {
+            labels: ['13.01.2021', '15.01.2021'],
+            series: [
+                [1, 10, 15]
+            ]
+        }, {
+            lineSmooth: false,
+            fullWidth: true,
+            showPoint: false,
+            chartPadding: {
+                right: 10,
+                left: 0,
+            },
+            responsive: true,
+            axisX: {
+
+                showGrid: false,
+
+            }
+        });
+
+        new Chartist.Line('#conv1', {
+            series: [
+                [5, 5, 7, 8, 5, 3, 5, 10]
+            ]
+        }, {
+            lineSmooth: false,
+            showPoint: false,
+            height: 90,
+            fullWidth: true,
+            low: 0,
+            showArea: true,
+            chartPadding: {
+                right: 10,
+                top: 0,
+                left: 0,
+                bottom: 0,
+            },
+            axisX: {
+                showGrid: false,
+                showLabel: false,
+                offset: 0,
+            },
+            axisY: {
+                showGrid: false,
+                showLabel: false,
+                offset: 0,
+            }
+        });
+
+        new Chartist.Line('#conv2', {
+            series: [
+                [2, 5, 5, 5, 5, 5, 5, 10]
+            ]
+        }, {
+            lineSmooth: false,
+            showPoint: false,
+            height: 90,
+            fullWidth: true,
+            low: 0,
+            showArea: true,
+            chartPadding: {
+                right: 10,
+                top: 0,
+                left: 0,
+                bottom: 0,
+            },
+            axisX: {
+
+                showGrid: false,
+
+                showLabel: false,
+                offset: 0,
+            },
+            axisY: {
+
+                showGrid: false,
+
+                showLabel: false,
+                offset: 0,
+            }
+        });
+
+        new Chartist.Pie('#round1', {
+            series: [30, 30, 30, 10]
+        }, {
+            donut: true,
+
+            donutSolid: true,
+            startAngle: 0,
+            showLabel: false,
+            responsive: true,
+        });
+
+        new Chartist.Pie('#round2', {
+            series: [33, 33, 33]
+        }, {
+            donut: true,
+
+            donutSolid: true,
+            startAngle: 0,
+            showLabel: false,
+            responsive: true,
+        });
+    });
+</script>
 
 </html>

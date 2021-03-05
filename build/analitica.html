@@ -7,12 +7,12 @@
     <title>Аналитика</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@700&display=swap&v=287e70099d27dfab7f9c33d3a21bbb0c" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500;700;800;900&display=swap&v=287e70099d27dfab7f9c33d3a21bbb0c" rel="stylesheet">
-    <link rel='stylesheet' type='text/css' media='screen' href='./libs/niseSelect/nice-select.css?v=287e70099d27dfab7f9c33d3a21bbb0c'>
-    <link rel='stylesheet' type='text/css' media='screen' href='./libs/datapicker/datepicker.min.css?v=287e70099d27dfab7f9c33d3a21bbb0c'>
-    <link rel='stylesheet' type='text/css' media='screen' href='./libs/chartist/chartist.min.css?v=287e70099d27dfab7f9c33d3a21bbb0c'>
-    <link rel='stylesheet' type='text/css' media='screen' href='./css/main.min.css?v=287e70099d27dfab7f9c33d3a21bbb0c'>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@700&display=swap&v=78807bc452aa369e81bdd7bbc8246cdf" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500;700;800;900&display=swap&v=78807bc452aa369e81bdd7bbc8246cdf" rel="stylesheet">
+    <link rel='stylesheet' type='text/css' media='screen' href='./libs/niseSelect/nice-select.css?v=78807bc452aa369e81bdd7bbc8246cdf'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./libs/datapicker/datepicker.min.css?v=78807bc452aa369e81bdd7bbc8246cdf'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./libs/chartist/chartist.min.css?v=78807bc452aa369e81bdd7bbc8246cdf'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./css/main.min.css?v=78807bc452aa369e81bdd7bbc8246cdf'>
 </head>
 
 <body>
@@ -380,11 +380,121 @@
         </div>
     </div>
 </body>
-<script src="./libs/jquery/jquery.min.js?v=287e70099d27dfab7f9c33d3a21bbb0c"></script>
-<script src="./libs/niseSelect/nice-select.min.js?v=287e70099d27dfab7f9c33d3a21bbb0c"></script>
+<script src="./libs/jquery/jquery.min.js?v=78807bc452aa369e81bdd7bbc8246cdf"></script>
+<script src="./libs/niseSelect/nice-select.min.js?v=78807bc452aa369e81bdd7bbc8246cdf"></script>
 
-<script src="./libs/datapicker/datepicker.js?v=287e70099d27dfab7f9c33d3a21bbb0c"></script>
-<script src="./libs/chartist/chartist.min.js?v=287e70099d27dfab7f9c33d3a21bbb0c"></script>
-<script src="./js/main.js?v=287e70099d27dfab7f9c33d3a21bbb0c"></script>
+<script src="./libs/datapicker/datepicker.js?v=78807bc452aa369e81bdd7bbc8246cdf"></script>
+<script src="./libs/chartist/chartist.min.js?v=78807bc452aa369e81bdd7bbc8246cdf"></script>
+<script src="./js/main.js?v=78807bc452aa369e81bdd7bbc8246cdf"></script>
+<script>
+    $(function() {
+
+
+        new Chartist.Line('#click-charts', {
+            labels: ['13.01.2021', '15.01.2021'],
+            series: [
+                [1, 10, 15]
+            ]
+        }, {
+            lineSmooth: false,
+            fullWidth: true,
+            showPoint: false,
+            chartPadding: {
+                right: 10,
+                left: 0,
+            },
+            responsive: true,
+            axisX: {
+
+                showGrid: false,
+
+            }
+        });
+
+        new Chartist.Line('#conv1', {
+            series: [
+                [5, 5, 7, 8, 5, 3, 5, 10]
+            ]
+        }, {
+            lineSmooth: false,
+            showPoint: false,
+            height: 90,
+            fullWidth: true,
+            low: 0,
+            showArea: true,
+            chartPadding: {
+                right: 10,
+                top: 0,
+                left: 0,
+                bottom: 0,
+            },
+            axisX: {
+                showGrid: false,
+                showLabel: false,
+                offset: 0,
+            },
+            axisY: {
+                showGrid: false,
+                showLabel: false,
+                offset: 0,
+            }
+        });
+
+        new Chartist.Line('#conv2', {
+            series: [
+                [2, 5, 5, 5, 5, 5, 5, 10]
+            ]
+        }, {
+            lineSmooth: false,
+            showPoint: false,
+            height: 90,
+            fullWidth: true,
+            low: 0,
+            showArea: true,
+            chartPadding: {
+                right: 10,
+                top: 0,
+                left: 0,
+                bottom: 0,
+            },
+            axisX: {
+
+                showGrid: false,
+
+                showLabel: false,
+                offset: 0,
+            },
+            axisY: {
+
+                showGrid: false,
+
+                showLabel: false,
+                offset: 0,
+            }
+        });
+
+        new Chartist.Pie('#round1', {
+            series: [30, 30, 30, 10]
+        }, {
+            donut: true,
+
+            donutSolid: true,
+            startAngle: 0,
+            showLabel: false,
+            responsive: true,
+        });
+
+        new Chartist.Pie('#round2', {
+            series: [33, 33, 33]
+        }, {
+            donut: true,
+
+            donutSolid: true,
+            startAngle: 0,
+            showLabel: false,
+            responsive: true,
+        });
+    });
+</script>
 
 </html>
