@@ -311,7 +311,7 @@ $(function() {
         }
     })
 
-    $('.customer__inline .color input').on('change', function() {
+    $('.customer__inline .color input').on('change input', function() {
         let colorVal = $(this).val()
         console.log(colorVal)
         if (colorVal == '#ffffff') {
@@ -379,10 +379,10 @@ $(function() {
     }
     editVidget1()
 
-    $('#v1 .customer__inline input').on('change', function() {
+    $('#v1 .customer__inline input').on('change input', function() {
         editVidget1()
     })
-    $('#v1 .custom__checkbox input').on('change', function() {
+    $('#v1 .custom__checkbox input').on('change input', function() {
         editVidget1()
     })
 
@@ -453,7 +453,7 @@ $(function() {
     }
     editVidget2()
 
-    $('#v2 .customer__inline input').on('change', function() {
+    $('#v2 .customer__inline input').on('change input', function() {
         editVidget2()
     })
 
@@ -506,7 +506,7 @@ $(function() {
     }
     editVidget3()
 
-    $('#v3 .customer__inline input').on('change', function() {
+    $('#v3 .customer__inline input').on('change input', function() {
         editVidget3()
     })
 
