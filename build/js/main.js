@@ -522,5 +522,129 @@ $(function() {
         editVidget3()
     })
 
+    if ($('.datapicker').length) {
+        $.fn.datepicker.language['ru'] = {
+            days: ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'],
+            daysShort: ['Вос', 'Пон', 'Вто', 'Сре', 'Чет', 'Пят', 'Суб'],
+            daysMin: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
+            months: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
+            monthsShort: ['Янв', 'Фев', 'Мар', 'Апр', 'Май', 'Июн', 'Июл', 'Авг', 'Сен', 'Окт', 'Ноя', 'Дек'],
+            today: 'Сегодня',
+            clear: 'Очистить',
+            dateFormat: 'dd.mm.yyyy',
+            timeFormat: 'hh:ii',
+            firstDay: 1
+        };
+        $('.datapicker').datepicker();
+    }
+
+    new Chartist.Line('#click-charts', {
+        labels: ['13.01.2021', '15.01.2021'],
+        series: [
+            [1, 10, 15]
+        ]
+    }, {
+        lineSmooth: false,
+        fullWidth: true,
+        showPoint: false,
+        chartPadding: {
+            right: 10,
+            left: 0,
+        },
+        responsive: true,
+        axisX: {
+            // Отключаем сетку для этой оси
+            showGrid: false,
+
+        }
+    });
+
+    new Chartist.Line('#conv1', {
+        series: [
+            [5, 5, 7, 8, 5, 3, 5, 10]
+        ]
+    }, {
+        lineSmooth: false,
+        showPoint: false,
+        height: 90,
+        fullWidth: true,
+        low: 0,
+        showArea: true,
+        chartPadding: {
+            right: 10,
+            top: 0,
+            left: 0,
+            bottom: 0,
+        },
+        axisX: {
+            // Отключаем сетку для этой оси
+            showGrid: false,
+            // и не показываем метки
+            showLabel: false,
+            offset: 0,
+        },
+        axisY: {
+            // Отключаем сетку для этой оси
+            showGrid: false,
+            // и не показываем метки
+            showLabel: false,
+            offset: 0,
+        }
+    });
+
+    new Chartist.Line('#conv2', {
+        series: [
+            [2, 5, 5, 5, 5, 5, 5, 10]
+        ]
+    }, {
+        lineSmooth: false,
+        showPoint: false,
+        height: 90,
+        fullWidth: true,
+        low: 0,
+        showArea: true,
+        chartPadding: {
+            right: 10,
+            top: 0,
+            left: 0,
+            bottom: 0,
+        },
+        axisX: {
+            // Отключаем сетку для этой оси
+            showGrid: false,
+            // и не показываем метки
+            showLabel: false,
+            offset: 0,
+        },
+        axisY: {
+            // Отключаем сетку для этой оси
+            showGrid: false,
+            // и не показываем метки
+            showLabel: false,
+            offset: 0,
+        }
+    });
+
+    new Chartist.Pie('#round1', {
+        series: [30, 30, 30, 10]
+    }, {
+        donut: true,
+
+        donutSolid: true,
+        startAngle: 0,
+        showLabel: false,
+        responsive: true,
+    });
+
+    new Chartist.Pie('#round2', {
+        series: [33, 33, 33]
+    }, {
+        donut: true,
+
+        donutSolid: true,
+        startAngle: 0,
+        showLabel: false,
+        responsive: true,
+    });
 
 })

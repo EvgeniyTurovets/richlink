@@ -1,0 +1,466 @@
+.analit__header {
+    display: flex;
+    justify-content: flex-end;
+    a {
+        margin-left: 6px;
+        background: #FFCACA;
+        border-radius: 3px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        height: 30px;
+        padding: 0 12px;
+        font-weight: 800;
+        transition: 0.1s all;
+    }
+    a.active,
+    a:hover {
+        background: #FF9589;
+    }
+    input {
+        background: #FFCACA;
+        border-radius: 3px;
+        font-weight: 800;
+        color: #ffffff;
+        text-align: center;
+        margin-left: 6px;
+        width: 154px;
+        text-transform: lowercase;
+        cursor: pointer;
+        transition: 0.1s all;
+    }
+    input:hover {
+        background: #FF9589;
+    }
+    input.active {
+        background: #FF9589;
+    }
+}
+
+.datepicker {
+    font-family: 'Raleway', sans-serif;
+}
+
+.datepicker--cell.-selected-,
+.datepicker--cell.-selected-.-current- {
+    background: #FF9589;
+}
+
+.datepicker--cell.-selected-.-focus- {
+    background: #FF9589;
+}
+
+.datepicker--cell.-in-range- {
+    background: #FFCACA;
+}
+
+.datepicker--cell.-focus- {
+    background: #FFCACA;
+}
+
+.datepicker--day-name {
+    color: #000;
+    font-weight: 800;
+}
+
+.datepicker--nav-action:hover,
+.datepicker--nav-title:hover {
+    background: #FF9589;
+    color: #fff;
+    i {
+        color: #fff;
+    }
+    path {
+        stroke: #fff;
+    }
+}
+
+.datepicker--cell.-current- {
+    color: #000;
+    font-weight: 800;
+}
+
+.datepicker--cell.-current-.-in-range- {
+    color: #000;
+    font-weight: 800;
+}
+
+.analit {
+    margin-top: -62px;
+    max-width: 957px;
+}
+
+.analit__header {
+    margin-bottom: 33px;
+}
+
+.analit__row {
+    display: flex;
+    margin: 0 -15px;
+    margin-bottom: 24px;
+}
+
+.analit__col {
+    width: calc(50% - 30px);
+    margin: 0 15px;
+}
+
+.analit__item {
+    padding: 20px 25px;
+    background-color: #ffffff;
+    height: 100%;
+}
+
+.analit__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    font-weight: 800;
+    margin-bottom: 10px;
+    a {
+        margin-left: 10px;
+    }
+}
+
+#click-charts {
+    height: 290px;
+    .ct-series-a .ct-bar,
+    .ct-series-a .ct-line,
+    .ct-series-a .ct-point,
+    .ct-series-a .ct-slice-donut {
+        stroke: #884594;
+    }
+    .ct-series-b .ct-bar,
+    .ct-series-b .ct-line,
+    .ct-series-b .ct-point,
+    .ct-series-b .ct-slice-donut {
+        stroke: #BBBBBB;
+    }
+    .ct-labels foreignObject:nth-child(2) span {
+        text-align: right;
+        justify-content: flex-end;
+    }
+}
+
+.conv__wrap {
+    display: flex;
+    .left {
+        flex: 1;
+    }
+    .right {
+        flex: 1;
+    }
+}
+
+.analit__conversia {
+    height: 100%;
+    .analit__item {
+        height: calc(50% - 12px);
+    }
+    .analit__item:first-child {
+        margin-bottom: 24px;
+    }
+}
+
+.analit__conversia {
+    .ct-series-a .ct-bar,
+    .ct-series-a .ct-line,
+    .ct-series-a .ct-point,
+    .ct-series-a .ct-slice-donut {
+        stroke: #FF6767;
+    }
+    .ct-series-a .ct-area,
+    .ct-series-a .ct-slice-donut-solid,
+    .ct-series-a .ct-slice-pie {
+        fill: #FFCACA;
+        fill-opacity: 1;
+    }
+}
+
+.conv__procent {
+    font-size: 23px;
+    color: #FF6767;
+    margin-bottom: 13px;
+}
+
+.conv__line {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 10px;
+    margin-bottom: 12px;
+}
+
+.conv__line span {
+    color: #FF6767;
+    display: block;
+    width: 55px;
+    margin-left: 5px;
+}
+
+.chatrt__round-wrap {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    .left,
+    .right {
+        flex: 1
+    }
+}
+
+.perehod-line {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    padding-left: 24px;
+    margin-bottom: 16px;
+    span {
+        display: block;
+        margin-left: 5px;
+    }
+}
+
+.perehod-line:before {
+    content: "";
+    display: block;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    left: 0;
+    top: 1px;
+}
+
+.perehod-line.first:before {
+    background-color: #884594;
+}
+
+.perehod-line.two:before {
+    background-color: #FF6767;
+}
+
+.perehod-line.three:before {
+    background-color: #FFEE57;
+}
+
+.perehod-line.four:before {
+    background-color: #FF8E3D;
+}
+
+#round1 {
+    width: 167px;
+    height: 167px;
+    margin-left: auto;
+    margin-top: -20px;
+}
+
+#round2 {
+    width: 120px;
+    height: 120px;
+}
+
+.round {
+    position: relative;
+    .ct-series-a .ct-area,
+    .ct-series-a .ct-slice-donut-solid,
+    .ct-series-a .ct-slice-pie {
+        fill: #884594;
+    }
+    .ct-series-b .ct-area,
+    .ct-series-b .ct-slice-donut-solid,
+    .ct-series-b .ct-slice-pie {
+        fill: #FF6767;
+    }
+    .ct-series-c .ct-area,
+    .ct-series-c .ct-slice-donut-solid,
+    .ct-series-c .ct-slice-pie {
+        fill: #FFEE57;
+    }
+    .ct-series-d .ct-area,
+    .ct-series-d .ct-slice-donut-solid,
+    .ct-series-d .ct-slice-pie {
+        fill: #FF8E3D;
+    }
+}
+
+.round:before {
+    content: "";
+    width: 35%;
+    height: 35%;
+    display: block;
+    position: absolute;
+    background-color: #fff;
+    z-index: 1;
+    border-radius: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.change__type {
+    display: flex;
+    margin-bottom: 21px;
+    margin-top: -10px;
+    a {
+        font-size: 12px;
+        color: #FF9589;
+        margin-right: 8px;
+        text-decoration: underline;
+    }
+    a.active {
+        text-decoration: none;
+    }
+}
+
+.analit__item.item-right {
+    display: flex;
+    flex-direction: column;
+}
+
+@media(max-width: 1299px) {
+    .analit {
+        margin-top: 0;
+    }
+}
+
+@media(max-width: 1199px) and (min-width: 1025px) {
+    #round1 {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+@media(max-width: 991px) {
+    #round1 {
+        width: 120px;
+        height: 120px;
+    }
+    .analit__col {
+        margin: 0 10px;
+        width: calc(50% - 20px)
+    }
+    .analit__row {
+        margin: 0 -10px;
+        margin-bottom: 20px;
+    }
+    .conv__line {
+        font-size: 14px;
+    }
+    .analit__item {
+        padding: 15px;
+    }
+}
+
+@media(max-width: 767px) {
+    .analit__row {
+        flex-direction: column;
+        margin-bottom: 0;
+    }
+    .analit__col {
+        width: calc(100% - 20px);
+        margin-bottom: 20px;
+    }
+    #round1 {
+        margin: 0 auto;
+        width: 160px;
+        height: 160px;
+    }
+    #round2 {
+        margin: 0 auto;
+        width: 160px;
+        height: 160px;
+    }
+    .analit__header {
+        flex-wrap: wrap;
+        a {
+            margin-bottom: 10px;
+        }
+        input {
+            height: 30px;
+        }
+    }
+    #click-charts {
+        height: 190px;
+    }
+}
+
+@media(max-width: 424px) {
+    .perehod-line {
+        font-size: 14px;
+    }
+    #round1 {
+        width: 40vw;
+        height: 40vw;
+        margin: 0 auto;
+    }
+    #round2 {
+        margin: 0 auto;
+        width: 40vw;
+        height: 40vw;
+    }
+    .conv__line {
+        max-width: 240px;
+    }
+    .conv__wrap {
+        flex-direction: column;
+    }
+    .analit__item.item-right {
+        .chatrt__round-wrap {
+            flex-direction: column-reverse;
+        }
+    }
+    .chatrt__round-wrap {
+        flex-direction: column;
+    }
+    .chatrt__round-wrap .left,
+    .chatrt__round-wrap .right {
+        width: 100%;
+    }
+}
+
+.analit__table {
+    background-color: #fff;
+    padding: 19px 25px;
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 10px;
+    }
+    thead {
+        background-color: #FFF4EE;
+    }
+    tbody tr {
+        border-bottom: 1px solid #E5E5E5;
+    }
+    td {
+        padding: 10px 13px;
+        text-align: center;
+    }
+    .url {
+        font-weight: 800;
+        text-align: left;
+        word-break: break-word;
+    }
+    .sum {
+        font-weight: 800;
+    }
+}
+
+@media(max-width: 991px) {
+    .analit__table {
+        padding: 15px;
+    }
+}
+
+@media(max-width: 767px) {
+    .analit__table {
+        font-size: 14px;
+        overflow: auto;
+    }
+    .analit__table__wrap {
+        overflow: auto;
+    }
+    .analit__table table {
+        max-width: initial;
+        width: 530px;
+    }
+}
