@@ -439,6 +439,7 @@
         font-weight: 800;
         text-align: left;
         word-break: break-word;
+        max-width: 200px;
     }
     .sum {
         font-weight: 800;
@@ -461,6 +462,49 @@
     }
     .analit__table table {
         max-width: initial;
-        width: 530px;
+        width: 630px;
+    }
+}
+.name-mark{
+    cursor: pointer;
+}
+.name-mark span{
+    position: relative;
+    bottom: 2px;
+    display: inline-block;
+}
+.name-mark.active span{
+    transform: rotate(180deg);
+    bottom: 0;
+}
+
+.analitic-search{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    .catalog__search{
+        margin-left: 25px;
+        input{
+            width: 300px;
+            max-width: 100%;
+        }
+    }
+}
+
+@media(max-width: 767px){
+    .analitic-search{
+        flex-direction: column;
+        align-items: flex-start;
+        .catalog__search{
+            margin-left: 0;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+    }
+}
+@media(max-width: 424px){
+   
+    .analitic-search .catalog__search input{
+        width: 230px;
     }
 }

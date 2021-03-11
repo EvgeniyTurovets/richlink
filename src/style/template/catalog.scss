@@ -28,6 +28,7 @@
 
 .catalog__search {
     position: relative;
+    margin-right: 10px;
     button {
         position: absolute;
         top: 50%;
@@ -39,7 +40,11 @@
         margin-top: 2px;
     }
 }
-
+@media(max-width: 991px){
+    .catalog__search{
+        margin-right: 0;
+    }
+}
 .catalog__search input {
     border: 1px solid #383838;
     border-radius: 47px;
