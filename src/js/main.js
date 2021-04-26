@@ -153,6 +153,9 @@ $(function() {
 
     let arrSetting = [];
 
+    let settLength = settingCheck.length
+    console.log(settLength)
+
     function settingReed() {
         let count = 0;
         $.each(settingCheck, function(i, val) {
@@ -168,12 +171,16 @@ $(function() {
         } else {
             $('.catalog__table').removeClass('big')
         }
+        console.log(arrSetting)
     }
+
 
     function settingApruv() {
         let j = 0;
+
         $.each(priceItem, function(i, val) {
-            if (j > 3) j = 0
+            if (j >= settLength) j = 0
+
             if (arrSetting[j]) {
                 $(val).show()
             } else {
@@ -183,7 +190,8 @@ $(function() {
         })
 
         $.each(bodyItem, function(i, val) {
-            if (j > 3) j = 0
+            if (j >= settLength) j = 0
+
             if (arrSetting[j]) {
                 $(val).show()
             } else {
@@ -191,7 +199,9 @@ $(function() {
             }
             j++
         })
+
         $.each(headItem, function(i, val) {
+
             if (arrSetting[i]) {
                 $(val).show()
             } else {
@@ -536,7 +546,7 @@ $(function() {
         $('.datapicker').datepicker();
     }
 
-    $('.name-mark').on('click', function(){
+    $('.name-mark').on('click', function() {
         $('.name-mark').not(this).removeClass('active')
         $(this).toggleClass('active')
     })
